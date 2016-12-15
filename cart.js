@@ -13,17 +13,17 @@ class Cart{
   }
   totalCart(){
     let total = 0;
-    for(let i=0; i<this.itemList.length; i++){
+    for(i=0; i<this.itemList.length; i++){
       total += (this.itemList[i].price*this.itemQuantity[i]);
     }
     return total;
   }
   subCart(days){
-    var subCart = new Cart([],[]);
-    for(let i=0; i<this.itemList.length; i++){
+    var subCart = new Cart();
+    for(i=0; i<this.itemList.length; i++){
       if(this.itemList[i].shipping == days){
         subCart.itemList.push(this.itemList[i]);
-        subCart.itemQuantity.push(this.itemQuantity[i]);
+        subCart.itemQuantity.push(this.itemList[i]);
       }
     }
     return subCart;
