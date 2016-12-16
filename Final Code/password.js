@@ -50,5 +50,3 @@ class Password{
     return key;
   }
 }
-var test = new Password("1234567812345678123456789","8888-8888-8888");
-console.log(test.validPrivateKey());
